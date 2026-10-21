@@ -134,6 +134,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #fe6c3a;outline-offset:3p
   @keyframes mesh-title-in{from{opacity:0;clip-path:inset(0 0 100% 0);translate:0 8px}to{opacity:1;clip-path:inset(0);translate:0 0}}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+html.entry-complete :is(.brand,.menu-toggle,.nav li,.cta-top,.copy h1,.copy .lede,.copy .cta-main){animation:none!important}
 </style>
 </head>
 <body>
@@ -203,5 +204,6 @@ a:focus-visible,button:focus-visible{outline:2px solid #fe6c3a;outline-offset:3p
   menu.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false);});
 })();
 </script>
+<script>setTimeout(function(){document.documentElement.classList.add("entry-complete")},2300)</script>
 </body>
 </html>
